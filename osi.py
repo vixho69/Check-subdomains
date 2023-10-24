@@ -53,10 +53,12 @@ def ss():
                 yy = tt.headers
                 if "Server" in yy and "cloudflare" in yy["Server"].lower():
                     print("CloudFlare:",verde + "True")
+                    h = datetime.now().strftime("%H:%M, %d-%m-%Y")
+                    print(verde + "Hora de revisión:", h)
                 else:
                     print("CloudFlare:", rojo + "False")
-                    hora_actual = datetime.now().strftime("%H:%M, %d-%m-%Y")
-                    print(verde + "Hora de revisión:", hora_actual)
+                    qw = datetime.now().strftime("%H:%M, %d-%m-%Y")
+                    print(verde + "Hora de revisión:", qw)
             except:
                 pass
 
