@@ -10,6 +10,6 @@ pip install -r requirements.txt
 ```
 python3 osi.py
 ```
-algo basico apartir de modulos.
+algo simple apartir de modulos.
 
 # discord: little.kid
