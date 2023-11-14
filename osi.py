@@ -20,9 +20,7 @@ print(magenta + """
                                         By: Little.Kid
 """)
 
-print(rojo + "Ingresa un dominio, ejemplo: google.com")
-cosa_fea = input(">> ")
-print(amarillo + "ingresa de nuevo el dominio.")
+print(amarillo + "ingresa de un dominio.")
 cosa_fea2 = input(">> ")
 if cosa_fea2 == "":
     print("ingresa algo XDDDDDDDDDDDDDDDDD")
