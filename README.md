@@ -2,6 +2,8 @@
 
 **· script hecho mas por meramente aburrimiento.**
 
+**· En desarrollo.**
+
 instalacion
 
 ```
