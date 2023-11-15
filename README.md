@@ -16,6 +16,7 @@ algo simple apartir de modulos, antes de ejecutar agregar obligatoriamente mas d
 
 # ejemplo:
 
-![imagen](https://github.com/vixho69/Check-sub-domains/assets/133933012/52d40ff5-d8bc-49c4-8882-9de607c71bd0)
+![imagen](https://github.com/vixho69/Check-sub-domains/assets/133933012/472600ce-4671-4a1e-b309-f742da2034ad)
+
 
 # discord: little.kid
