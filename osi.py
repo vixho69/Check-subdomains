@@ -21,8 +21,8 @@ print(magenta + """
 """)
 
 print(amarillo + "ingresa de un dominio.")
-cosa_fea2 = input(">> ")
-if cosa_fea2 == "":
+lw = input(">> ")
+if lw == "":
     print("ingresa algo XDDDDDDDDDDDDDDDDD")
     sys.exit()
 else:
@@ -30,34 +30,31 @@ else:
 def ss():
     with open("sub.txt","r") as osi:
         for cosa in osi:
-            enlace = f"https://{cosa.strip()}.{cosa_fea2}"
-            enlace2 = f"www.{cosa.strip()}.{cosa_fea2}"
+            enlace = f"http://{cosa.strip()}.{lw}"
+            enlace2 = f"www.{cosa.strip()}.{lw}"
             print("")
             try:
                 rr = requests.get(enlace)
                 if rr.status_code == 200:
                     print(verde + "Dominio:", enlace2)
-                else:
+                elif rr.status_code == 404:
                     print(rojo + "Dominio:", enlace2)
-            except:
+                else:
+                    pass
+            except requests.exceptions.ConnectionError:
                 print(rojo + f"Dominio: {enlace2}")
             try:
                 pp = socket.gethostbyname(enlace2)
                 print(verde + f"IP: {pp}")
-            except:
+            except socket.gaierror:
                 pass
             try:
                 tt = requests.get(enlace)
                 yy = tt.headers
                 if "Server" in yy and "cloudflare" in yy["Server"].lower():
-                    print("CloudFlare:",verde + "True")
-                    h = datetime.now().strftime("%H:%M, %d-%m-%Y")
-                    print(verde + "Hora de revisión:", h)
+                    print(verde + "CloudFlare:",verde + "True")
                 else:
-                    print("CloudFlare:", rojo + "False")
-                    qw = datetime.now().strftime("%H:%M, %d-%m-%Y")
-                    print(verde + "Hora de revisión:", qw)
-            except:
+                    print(verde +"CloudFlare:", rojo + "False")
+            except requests.exceptions.ConnectionError:
                 pass
-
 ss()
