@@ -1,6 +1,5 @@
 import socket
 import requests
-from datetime import datetime
 import sys
 
 rojo = "\033[31;1m"
