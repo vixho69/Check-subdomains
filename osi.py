@@ -1,11 +1,12 @@
 import socket
 import requests
+import colorama
 import sys
 
-rojo = "\033[31;1m"
-verde = "\033[92m"
-magenta = "\033[36m"
-amarillo = "\033[33m"
+red = colorama.Fore.RED
+green = colorama.Fore.GREEN
+magenta = colorama.Fore.MAGENTA
+yellow = colorama.Fore.YELLOW
 
 print(magenta + """
  ▄█▀▀▀█▄█           ▄██                    ▀███                                     ██                    
@@ -19,7 +20,7 @@ print(magenta + """
                                         By: Little.Kid
 """)
 
-print(amarillo + "ingresa de un dominio.")
+print(yellow + "ingresa de un dominio.")
 lw = input(">> ")
 if lw == "":
     print("ingresa algo XDDDDDDDDDDDDDDDDD")
@@ -35,25 +36,25 @@ def ss():
             try:
                 rr = requests.get(enlace)
                 if rr.status_code == 200:
-                    print(verde + "Dominio:", enlace2)
+                    print(green + "Dominio:", enlace2)
                 elif rr.status_code == 404:
-                    print(rojo + "Dominio:", enlace2)
+                    print(red + "Dominio:", enlace2)
                 else:
                     pass
             except requests.exceptions.ConnectionError:
-                print(rojo + f"Dominio: {enlace2}")
+                print(red + f"Dominio: {enlace2}")
             try:
                 pp = socket.gethostbyname(enlace2)
-                print(verde + f"IP: {pp}")
+                print(green + f"IP: {pp}")
             except socket.gaierror:
                 pass
             try:
                 tt = requests.get(enlace)
                 yy = tt.headers
                 if "Server" in yy and "cloudflare" in yy["Server"].lower():
-                    print(verde + "CloudFlare:",verde + "True")
+                    print(green + "CloudFlare:",green + "True")
                 else:
-                    print(verde +"CloudFlare:", rojo + "False")
+                    print(green +"CloudFlare:", red + "False")
             except requests.exceptions.ConnectionError:
                 pass
 ss()
