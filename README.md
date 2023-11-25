@@ -1,24 +1,28 @@
 # LK-SS
+Check if subdomains exist for a certain domain.
 
-**· script hecho mas por meramente aburrimiento.**
-
-**· En desarrollo.**
-
-instalacion
-
+## Installation
+```sh
+# Clone the repo or download the zip
+git clone https://github.com/vixho69/Check-sub-domains.git 
 ```
+
+```sh
 pip install -r requirements.txt
 ```
+
+```sh
+python osi.py
 ```
-python3 osi.py
-```
-# importante
-**Agregar mas contenido dentro del archivo " sub.txt " para que hacer las revisiones y todo el contenido con salto de linea para lograr obtener los datos.**
+
+# Important
+**Add the subdomains to sub.txt in order to make the script work. Otherwise you will encounter with an error and the program will close automatically.**
 
 
-# ejemplo:
+# Example:
 
 ![imagen](https://github.com/vixho69/Check-sub-domains/assets/133933012/8923ac04-fce0-41cb-b1a0-d7ba1a7d584a)
 
 
 # discord: little.kid
+### Co-authored with sta7ix
