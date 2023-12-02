@@ -18,7 +18,6 @@ python3 osi.py
 
 # ejemplo:
 
-![imagen](https://github.com/vixho69/Check-sub-domains/assets/133933012/8923ac04-fce0-41cb-b1a0-d7ba1a7d584a)
-
+![imagen](https://github.com/vixho69/Check-sub-domains/assets/133933012/6dc3ecd8-d380-4854-94d6-e854a7705188)
 
 # discord: little.kid
