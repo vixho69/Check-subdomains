@@ -4,11 +4,12 @@
 
 **· En desarrollo.**
 
-instalacion
-
+instalación
 ```
+git clone https://github.com/vixho69/Check-sub-domains
 pip install -r requirements.txt
 ```
+Ejecución
 ```
 python3 osi.py
 ```
