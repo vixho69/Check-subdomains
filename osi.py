@@ -1,12 +1,12 @@
 import socket
 import requests
-from datetime import datetime
+import colorama as color
 import sys
 
-rojo = "\033[31;1m"
-verde = "\033[92m"
-magenta = "\033[36m"
-amarillo = "\033[33m"
+rojo = color.Fore.RED
+verde = color.Fore.GREEN
+magenta = color.Fore.CYAN
+amarillo = color.Fore.YELLOW
 
 print(magenta + """
  ▄█▀▀▀█▄█           ▄██                    ▀███                                     ██                    
@@ -30,24 +30,26 @@ else:
 def ss():
     with open("sub.txt","r") as osi:
         for cosa in osi:
-            enlace = f"http://{cosa.strip()}.{lw}"
+            enlace = f"https://www.{cosa.strip()}.{lw}"
             enlace2 = f"www.{cosa.strip()}.{lw}"
+            enlace3 = f"http://www.{cosa.strip()}.{lw}"
             print("")
             try:
+                rev = requests.get(enlace3)
                 rr = requests.get(enlace)
                 if rr.status_code == 200:
-                    print(verde + "Dominio:", enlace2)
-                elif rr.status_code == 404:
-                    print(rojo + "Dominio:", enlace2)
+                    print(verde + "Dominio:", enlace)
+                elif rev.status_code == 200:
+                    print(verde + "Dominio:", enlace3)
                 else:
-                    pass
+                    print(rojo + "Dominio:", enlace2)
             except requests.exceptions.ConnectionError:
                 print(rojo + f"Dominio: {enlace2}")
             try:
                 pp = socket.gethostbyname(enlace2)
                 print(verde + f"IP: {pp}")
             except socket.gaierror:
-                pass
+                print("Fuera de servicio.")
             try:
                 tt = requests.get(enlace)
                 yy = tt.headers
