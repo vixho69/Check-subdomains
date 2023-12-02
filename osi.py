@@ -17,9 +17,8 @@ print(magenta + """
 ██     ██ ██    ██   ██▄   ▄██        ▀██    ██  ██▄   ▄██ ██    ██    ██ ██   ██   ██   ██    ██  █▄   ██
 █▀█████▀  ▀████▀███▄ █▀█████▀          ▀████▀███▄ ▀█████▀▄████  ████  ████▄████▀██▄████▄████  ████▄██████▀
 
-                                     By: Little.Kid, Version: 1.5
+                          By:  Little.Kid | Version: 1.5
 """)
-
 print(amarillo + "ingresa de un dominio.")
 lw = input(">> ")
 if lw == "":
