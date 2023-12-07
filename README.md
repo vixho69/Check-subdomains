@@ -11,7 +11,7 @@ pip install -r requirements.txt
 ```
 Ejecución
 ```
-python3 osi.py
+python3 Check.py
 ```
 # importante
 **Agregar mas contenido dentro del archivo " sub.txt " para que hacer las revisiones y todo el contenido con salto de linea para lograr obtener los datos.**
