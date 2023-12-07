@@ -6,7 +6,7 @@
 
 instalación
 ```
-git clone https://github.com/vixho69/Check-sub-domains
+git clone https://github.com/vixho69/Check-subdomains
 pip install -r requirements.txt
 ```
 Ejecución
