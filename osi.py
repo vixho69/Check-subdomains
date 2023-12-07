@@ -3,26 +3,23 @@ import requests
 import colorama as color
 import sys
 
-rojo = color.Fore.RED
-verde = color.Fore.GREEN
-magenta = color.Fore.CYAN
-amarillo = color.Fore.YELLOW
-
-print(magenta + """
- ▄█▀▀▀█▄█           ▄██                    ▀███                                     ██                    
-▄██    ▀█            ██                      ██                                                           
+print(color.Fore.CYAN + """
+ ▄█▀▀▀█▄█           ▄██                    ▀███                                     ██
+▄██    ▀█            ██                      ██
 ▀███▄   ▀███  ▀███   ██▄████▄           ▄█▀▀███   ▄██▀██▄▀████████▄█████▄  ▄█▀██▄ ▀███ ▀████████▄  ▄██▀███
   ▀█████▄ ██    ██   ██    ▀██        ▄██    ██  ██▀   ▀██ ██    ██    ██ ██   ██   ██   ██    ██  ██   ▀▀
 ▄     ▀██ ██    ██   ██     ██  █████ ███    ██  ██     ██ ██    ██    ██  ▄█████   ██   ██    ██  ▀█████▄
 ██     ██ ██    ██   ██▄   ▄██        ▀██    ██  ██▄   ▄██ ██    ██    ██ ██   ██   ██   ██    ██  █▄   ██
 █▀█████▀  ▀████▀███▄ █▀█████▀          ▀████▀███▄ ▀█████▀▄████  ████  ████▄████▀██▄████▄████  ████▄██████▀
 
-                          By:  Little.Kid | Version: 1.5
+                                By: Little.Kid | Versión: 1.6
 """)
-print(amarillo + "ingresa de un dominio.")
+
+print(color.Fore.YELLOW + "ingresa de un dominio.")
 lw = input(">> ")
 if lw == "":
-    print("ingresa algo XDDDDDDDDDDDDDDDDD")
+    print(color.Fore.RED + "No haz ingresado ninguno dominio!")
+    print(color.Fore.RESET)
     sys.exit()
 else:
     pass
@@ -37,25 +34,25 @@ def ss():
                 rev = requests.get(enlace3)
                 rr = requests.get(enlace)
                 if rr.status_code == 200:
-                    print(verde + "Dominio:", enlace)
+                    print(color.Fore.GREEN + "Dominio:", enlace)
                 elif rev.status_code == 200:
-                    print(verde + "Dominio:", enlace3)
+                    print(color.Fore.GREEN + "Dominio:", enlace3)
                 else:
-                    print(rojo + "Dominio:", enlace2)
+                    print(color.Fore.RED + "Dominio:", enlace2)
             except requests.exceptions.ConnectionError:
-                print(rojo + f"Dominio: {enlace2}")
+                print(color.Fore.RED + f"Dominio: {enlace2}")
             try:
                 pp = socket.gethostbyname(enlace2)
-                print(verde + f"IP: {pp}")
+                print(color.Fore.GREEN + f"IP: {pp}")
             except socket.gaierror:
                 print("Fuera de servicio.")
             try:
                 tt = requests.get(enlace)
                 yy = tt.headers
                 if "Server" in yy and "cloudflare" in yy["Server"].lower():
-                    print(verde + "CloudFlare:",verde + "True")
+                    print(color.Fore.GREEN + "CloudFlare:",color.Fore.GREEN + "True")
                 else:
-                    print(verde +"CloudFlare:", rojo + "False")
+                    print(color.Fore.GREEN + "CloudFlare:", color.Fore.RED + "False")
             except requests.exceptions.ConnectionError:
                 pass
 ss()
