@@ -15,7 +15,7 @@ print(color.Fore.CYAN + """
                                 By: Little.Kid | Versión: 1.6
 """)
 
-print(color.Fore.YELLOW + "ingresa de un dominio.")
+print(color.Fore.YELLOW + "Ingresa de un dominio, Ejemplo: google.com")
 lw = input(">> ")
 if lw == "":
     print(color.Fore.RED + "No haz ingresado ninguno dominio!")
