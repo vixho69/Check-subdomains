@@ -1,4 +1,4 @@
-# Versión: 1.7
+# Versión: 1.8
 
 **· Script hecho más por meramente aburrimiento.**
 
