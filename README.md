@@ -11,6 +11,7 @@ pip install -r requirements.txt
 ```
 Ejecución
 ```
+
 python3 Check.py
 ```
 # importante
@@ -18,7 +19,7 @@ python3 Check.py
 
 # ejemplo:
 
-![imagen](https://github.com/vixho69/Check-subdomains/assets/133933012/cd71c64c-c93d-4029-ae10-2d236fe2b4ae)
+![XD](https://github.com/vixho69/Check-subdomains/assets/133933012/323af103-ec5e-456b-bdef-f4b2c7dda1a2)
 
 
 # discord: little.kid
