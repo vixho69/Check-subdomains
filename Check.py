@@ -66,4 +66,4 @@ def main():
     check_domain(lw)
 
 if __name__ == "__main__":
-    main()￼Enter
+    main()
