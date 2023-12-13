@@ -3,7 +3,8 @@ import requests
 import colorama as color
 import sys
 
-print(color.Fore.CYAN + """
+def logo():
+    print(color.Fore.CYAN + """
  ▄█▀▀▀█▄█           ▄██                    ▀███                                     ██
 ▄██    ▀█            ██                      ██
 ▀███▄   ▀███  ▀███   ██▄████▄           ▄█▀▀███   ▄██▀██▄▀████████▄█████▄  ▄█▀██▄ ▀███ ▀████████▄  ▄██▀███
@@ -12,31 +13,28 @@ print(color.Fore.CYAN + """
 ██     ██ ██    ██   ██▄   ▄██        ▀██    ██  ██▄   ▄██ ██    ██    ██ ██   ██   ██   ██    ██  █▄   ██
 █▀█████▀  ▀████▀███▄ █▀█████▀          ▀████▀███▄ ▀█████▀▄████  ████  ████▄████▀██▄████▄████  ████▄██████▀
 
-                                By: Little.Kid | Versión: 1.6
-""")
+                                By: Little.Kid | Versión: 1.7
+    """)
 
-print(color.Fore.YELLOW + "Ingresa de un dominio, Ejemplo: google.com")
-lw = input(">> ")
-if lw == "":
-    print(color.Fore.RED + "No haz ingresado ninguno dominio!")
-    print(color.Fore.RESET)
-    sys.exit()
-else:
-    pass
-def ss():
-    with open("sub.txt","r") as osi:
+def domain():
+    print(color.Fore.YELLOW + "Ingresa un dominio, Ejemplo: google.com")
+    lw = input(">> ")
+    if lw == "":
+        print(color.Fore.RED + "No has ingresado ningún dominio!")
+        print(color.Fore.RESET)
+        sys.exit()
+    return lw
+
+def check_domain(lw):
+    with open("sub.txt", "r") as osi:
         for cosa in osi:
             enlace = f"https://www.{cosa.strip()}.{lw}"
             enlace2 = f"www.{cosa.strip()}.{lw}"
-            enlace3 = f"http://www.{cosa.strip()}.{lw}"
             print("")
             try:
-                rev = requests.get(enlace3)
-                rr = requests.get(enlace)
-                if rr.status_code == 200:
+                rev = requests.get(enlace)
+                if rev.status_code == 200:
                     print(color.Fore.GREEN + "Dominio:", enlace)
-                elif rev.status_code == 200:
-                    print(color.Fore.GREEN + "Dominio:", enlace3)
                 else:
                     print(color.Fore.RED + "Dominio:", enlace2)
             except requests.exceptions.ConnectionError:
@@ -50,9 +48,16 @@ def ss():
                 tt = requests.get(enlace)
                 yy = tt.headers
                 if "Server" in yy and "cloudflare" in yy["Server"].lower():
-                    print(color.Fore.GREEN + "CloudFlare:",color.Fore.GREEN + "True")
+                    print(color.Fore.GREEN + "CloudFlare:", color.Fore.GREEN + "True")
                 else:
                     print(color.Fore.GREEN + "CloudFlare:", color.Fore.RED + "False")
             except requests.exceptions.ConnectionError:
                 pass
-ss()
+
+def main():
+    logo()
+    lw = domain()
+    check_domain(lw)
+
+if __name__ == "__main__":
+    main()
