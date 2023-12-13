@@ -1,6 +1,6 @@
 # Versión: 1.7
 
-**· script hecho mas por meramente aburrimiento.**
+**· Script hecho más por meramente aburrimiento.**
 
 **· En desarrollo.**
 
@@ -14,7 +14,7 @@ Ejecución
 python3 Check.py
 ```
 # importante
-**Agregar mas contenido dentro del archivo " sub.txt " para que hacer las revisiones y todo el contenido con salto de linea para lograr obtener los datos.**
+**Agregar más contenido dentro del archivo "sub.txt" para que hacer las revisiones y todo el contenido con salto de línea para lograr obtener los datos.**
 
 # ejemplo:
 
