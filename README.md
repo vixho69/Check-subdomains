@@ -1,4 +1,4 @@
-# LK-SS
+# Versión: 1.7
 
 **· script hecho mas por meramente aburrimiento.**
 
@@ -18,6 +18,7 @@ python3 Check.py
 
 # ejemplo:
 
-![imagen](https://github.com/vixho69/Check-sub-domains/assets/133933012/ad35e9d2-9a5b-4ac2-8d37-19c7ca29a581)
+![imagen](https://github.com/vixho69/Check-subdomains/assets/133933012/cd71c64c-c93d-4029-ae10-2d236fe2b4ae)
+
 
 # discord: little.kid
