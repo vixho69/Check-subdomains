@@ -13,7 +13,7 @@ def logo():
 ██     ██ ██    ██   ██▄   ▄██        ▀██    ██  ██▄   ▄██ ██    ██    ██ ██   ██   ██   ██    ██  █▄   ██
 █▀█████▀  ▀████▀███▄ █▀█████▀          ▀████▀███▄ ▀█████▀▄████  ████  ████▄████▀██▄████▄████  ████▄██████▀
 
-                                By: Little.Kid | Versión: 1.7
+                                By: Little.Kid | Versión: 1.8
     """)
 
 def domain():
@@ -36,14 +36,14 @@ def check_domain(lw):
                 if rev.status_code == 200:
                     print(color.Fore.GREEN + "Dominio:", enlace)
                 else:
-                    print(color.Fore.RED + "Dominio:", enlace2)
+                    print(color.Fore.RED + "Dominio:", enlace2, "OFF")
             except requests.exceptions.ConnectionError:
                 print(color.Fore.RED + f"Dominio: {enlace2}")
             try:
                 pp = socket.gethostbyname(enlace2)
                 print(color.Fore.GREEN + f"IP: {pp}")
             except socket.gaierror:
-                print("Fuera de servicio.")
+                pass
             try:
                 tt = requests.get(enlace)
                 yy = tt.headers
@@ -53,6 +53,12 @@ def check_domain(lw):
                     print(color.Fore.GREEN + "CloudFlare:", color.Fore.RED + "False")
             except requests.exceptions.ConnectionError:
                 pass
+            try:
+                tcode = requests.get(enlace)
+                tcode2 = tcode.status_code
+                print(color.Fore.GREEN + "Codigo de respuesta:",color.Fore.MAGENTA + f"{tcode2}")
+            except requests.exceptions.ConnectionError:
+                pass
 
 def main():
     logo()
@@ -60,4 +66,4 @@ def main():
     check_domain(lw)
 
 if __name__ == "__main__":
-    main()
+    main()￼Enter
