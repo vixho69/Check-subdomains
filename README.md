@@ -14,7 +14,7 @@ Ejecución
 python3 Check.py
 ```
 # importante
-**Agregar más contenido dentro del archivo "sub.txt" para que hacer las revisiones y todo el contenido con salto de línea para lograr obtener los datos.**
+**Agregar más contenido dentro del archivo "sub.txt" para que hacer las revisiones y todo el contenido con salto de línea para lograr obtener los datos y que los subdominios no contengan salto de lineas (de mas)**
 
 # ejemplo:
 
