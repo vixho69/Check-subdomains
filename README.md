@@ -11,7 +11,6 @@ pip install -r requirements.txt
 ```
 Ejecución
 ```
-
 python3 Check.py
 ```
 # importante
