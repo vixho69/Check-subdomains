@@ -33,7 +33,7 @@ def check_domain(lw):
             print("")
             try:
                 rev = requests.get(enlace)
-                if rev.status_code == 200:
+                if rev.status_code >= 200:
                     print(color.Fore.GREEN + "Dominio:", enlace)
                 else:
                     print(color.Fore.RED + "Dominio:", enlace2, "OFF")
@@ -56,7 +56,7 @@ def check_domain(lw):
             try:
                 tcode = requests.get(enlace)
                 tcode2 = tcode.status_code
-                print(color.Fore.GREEN + "Codigo de respuesta:",color.Fore.MAGENTA + f"{tcode2}")
+                print(color.Fore.GREEN + "Codigo de respuesta:",color.Fore.MAGENTA + f"{tcode2}",color.Fore.RESET)
             except requests.exceptions.ConnectionError:
                 pass
 
