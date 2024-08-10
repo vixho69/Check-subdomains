@@ -25,7 +25,7 @@ python3 Check.py
 Installation
 ```
 git clone https://github.com/vixho69/Check-subdomains
-installing pip -r requirements.txt
+pip -r requirements.txt
 ```
 Execution
 ```
